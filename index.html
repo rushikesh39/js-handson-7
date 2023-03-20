@@ -1,107 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-
-<body>
-    <h2>
-        "We are interested in retrieving only the students' names; all the names
-        should be in caps. ['JOHN', 'BABA', 'YAGA', 'WICK']"
-    </h2>
+  </head>
+  <body>
+    <h4>
+      You are given a string (STR) of length N, consisting of only the lower
+      case English alphabet. Your task is to remove all the duplicate
+      occurrences of characters in the string.
+    </h4>
     <pre>
-        let records = [
-        { name: "John", id: 123, marks: 98 },
-        { name: "Baba", id: 101, marks: 23 },
-        { name: "yaga", id: 200, marks: 45 },
-        { name: "Wick", id: 115, marks: 75 },
-      ];
-
-      for(let i=0; i< records.length; i++){
-        console.log(records[i].name.toUpperCase());
+        let str='abcadeecfb';
+        let unique = [...new Set(str)].join('');
+        console.log(unique);
+    </pre>
+    <hr />
+    <h4>
+        You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+    </h4>
+    <pre>
+        let map = new Map();
+      for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (map.has(char)) {
+          map.set(char, map.get(char) + 1);
+        } else {
+          map.set(char, 1);
+        }
       }
+      map.forEach((value, key) => {
+        console.log(key + " = " + value);
+      });
     </pre>
-    <hr />
-    <h2>
-        "Suppose we have the same dataset as above but this time we want to get
-        the details of students who scored more than 50 marks. [{name: 'John', id:
-        123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
-    </h2>
-    <pre>
-        for (let i = 0; i < records.length; i++) {
-            if( records[i].marks > 50){
-                console.log(records[i]);
-            }
-            
-          }
-    </pre>
-    <hr />
-    <h2>
-        Retrieve the details of students who scored more than 50 marks and have
-        IDs greater than 120.
-    </h2>
-    <pre></pre>
-    <hr />
-    <h2></h2>
-    <pre></pre>
-    <hr />
-    <h2></h2>
-    <pre></pre>
-    <hr />
-    <h2></h2>
-    <pre></pre>
-    <hr />
-    <h2></h2>
-    <pre></pre>
     <hr />
     <script>
-        let records = [
-            { name: "John", id: 123, marks: 98 },
-            { name: "Baba", id: 101, marks: 23 },
-            { name: "yaga", id: 200, marks: 45 },
-            { name: "Wick", id: 115, marks: 75 },
-        ];
-        for (let i = 0; i < records.length; i++) {
-            console.log(records[i]);
+      // Q1
+      let str = "abcadeecfb";
+      let unique = [...new Set(str)].join("");
+      console.log(unique);
+      // Q1
+      
+      let map = new Map();
+      for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (map.has(char)) {
+          map.set(char, map.get(char) + 1);
+        } else {
+          map.set(char, 1);
         }
-        console.log(
-            "We are interested in retrieving only the students names all the namesshould be in caps."
-        );
-        for (let i = 0; i < records.length; i++) {
-            console.log(records[i].name.toUpperCase());
-        }
-
-        //Q2
-        console.log(
-            "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks"
-        );
-        for (let i = 0; i < records.length; i++) {
-            if (records[i].marks > 50) {
-                console.log(records[i]);
-            }
-        }
-        //   Q3
-        console.log('Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.')
-        for (let i = 0; i < records.length; i++) {
-            if (records[i].marks > 50 && records[i].id > 120) {
-                console.log(records[i]);
-            }
-        }
-        // Q4
-        console.log("");
-        let sum=0;
-        for (let i = 0; i < records.length; i++) {
-            if (records[i].marks >0) {
-                sum+=records[i].marks;
-            }
-        }
-        console.log(sum);
-
+      }
+      map.forEach((value, key) => {
+        console.log(key + " = " + value);
+      });
     </script>
-</body>
-
+  </body>
 </html>
