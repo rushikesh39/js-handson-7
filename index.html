@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        "We are interested in retrieving only the students' names; all the names
+        should be in caps. ['JOHN', 'BABA', 'YAGA', 'WICK']"
+    </h2>
+    <pre>
+        let records = [
+        { name: "John", id: 123, marks: 98 },
+        { name: "Baba", id: 101, marks: 23 },
+        { name: "yaga", id: 200, marks: 45 },
+        { name: "Wick", id: 115, marks: 75 },
+      ];
+
+      for(let i=0; i< records.length; i++){
+        console.log(records[i].name.toUpperCase());
+      }
+    </pre>
+    <hr />
+    <h2>
+        "Suppose we have the same dataset as above but this time we want to get
+        the details of students who scored more than 50 marks. [{name: 'John', id:
+        123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+    </h2>
+    <pre>
+        for (let i = 0; i < records.length; i++) {
+            if( records[i].marks > 50){
+                console.log(records[i]);
+            }
+            
+          }
+    </pre>
+    <hr />
+    <h2>
+        Retrieve the details of students who scored more than 50 marks and have
+        IDs greater than 120.
+    </h2>
+    <pre></pre>
+    <hr />
+    <h2></h2>
+    <pre></pre>
+    <hr />
+    <h2></h2>
+    <pre></pre>
+    <hr />
+    <h2></h2>
+    <pre></pre>
+    <hr />
+    <h2></h2>
+    <pre></pre>
+    <hr />
+    <script>
+        let records = [
+            { name: "John", id: 123, marks: 98 },
+            { name: "Baba", id: 101, marks: 23 },
+            { name: "yaga", id: 200, marks: 45 },
+            { name: "Wick", id: 115, marks: 75 },
+        ];
+        for (let i = 0; i < records.length; i++) {
+            console.log(records[i]);
+        }
+        console.log(
+            "We are interested in retrieving only the students names all the namesshould be in caps."
+        );
+        for (let i = 0; i < records.length; i++) {
+            console.log(records[i].name.toUpperCase());
+        }
+
+        //Q2
+        console.log(
+            "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks"
+        );
+        for (let i = 0; i < records.length; i++) {
+            if (records[i].marks > 50) {
+                console.log(records[i]);
+            }
+        }
+        //   Q3
+        console.log('Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.')
+        for (let i = 0; i < records.length; i++) {
+            if (records[i].marks > 50 && records[i].id > 120) {
+                console.log(records[i]);
+            }
+        }
+        // Q4
+        console.log("");
+        let sum=0;
+        for (let i = 0; i < records.length; i++) {
+            if (records[i].marks >0) {
+                sum+=records[i].marks;
+            }
+        }
+        console.log(sum);
+
+    </script>
+</body>
+
+</html>
